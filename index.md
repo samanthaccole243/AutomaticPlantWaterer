@@ -5,12 +5,11 @@
 </p>
 
 <h1 align="center"> <sub> Look no Further! 
-</h1>  
   
-<h1 align="left"> 
+  
 __Warning__ 
  <sub> This Project will solve all your plant problems
- </h1>
+
    
    
 ### Automatic Waterer
