@@ -8,7 +8,7 @@
 </h1>  
   
 <h1 align="left"> 
-**Warning 
+__Warning__ 
  <sub> This Project will solve all your plant problems
  </h1>
    
