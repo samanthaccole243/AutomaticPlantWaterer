@@ -10,9 +10,9 @@
 !Warning!
 This Project will solve all your plant problems 
 
-### Automatic Waterer
+## Automatic Waterer
    
-## Project description
+### Project description
 
 This project focuses on building a system that waters your plants for you with little to no effort. Just set it up, and refill the water tank when your told and you will have beautiful happy plants! 
 
