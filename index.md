@@ -7,7 +7,7 @@
 <h1 align="center"> <sub> Look no Further! 
   
   
-__Warning__ 
+!Warning!
  <sub> This Project will solve all your plant problems
 
    
