@@ -6,7 +6,9 @@
 
 <h1 align="center"> <sub> Look no Further! 
   
+  
  <h1 align="left"> 
-**Warning** This Project will solve all your plant problems
+  **Warning** 
+   This Project will solve all your plant problems
 
   
