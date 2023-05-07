@@ -9,6 +9,6 @@
   
  <h1 align="left"> 
   **Warning** 
-   This Project will solve all your plant problems
+   <sub> This Project will solve all your plant problems
 
   
