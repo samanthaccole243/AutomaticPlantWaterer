@@ -17,7 +17,8 @@
 ## Project description
 
 This project focuses on building a system that waters your plants for you with little to no effort. Just set it up, and refill the water tank when your told and you will have beautiful happy plants! 
-   
+
+
 <p align="center">
 <img width="297" alt="image" src="https://user-images.githubusercontent.com/89661904/236705943-0a679097-da5c-462c-af3a-b335baf13629.png">
 </p>
