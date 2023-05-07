@@ -1,1 +1,3 @@
-## Hi hi
+## Do you love plants, but always seem to Have them end up looking like this?
+<img width="409" alt="image" src="https://user-images.githubusercontent.com/89661904/236703888-14a6f4a1-a91e-4982-a2ce-fc9d0204a865.png">
+
