@@ -17,7 +17,7 @@
    
 ### Project description
    
-This project helps to create a system which waters your plants with little to no effort by you. Set it up, refill the water when told to by the raspberry pi, and watch your plants thrive!
+
 
    
 <p align="center">
