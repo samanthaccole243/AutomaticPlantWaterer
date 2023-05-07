@@ -5,19 +5,19 @@
 </p>
 
 <h1 align="center"> <sub> Look no Further! 
+</h1>  
   
-  
- <h1 align="left"> 
-  **Warning** 
-   <sub> This Project will solve all your plant problems
-   </p>
+<h1 align="left"> 
+**Warning** 
+ <sub> This Project will solve all your plant problems
+ </h1>
    
    
 ### Automatic Waterer
    
 ### Project description
-   
 
+This project centers around
 
    
 <p align="center">
