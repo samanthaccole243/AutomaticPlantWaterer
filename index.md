@@ -3,14 +3,8 @@
 
 <img width="299" alt="image" src="https://user-images.githubusercontent.com/89661904/236704407-b3c708fd-3550-4f1b-8e71-5645bf7ebfcb.png"> <img width="530" alt="image" src="https://user-images.githubusercontent.com/89661904/236704478-69dfd48c-00a6-4b79-8df5-cdbd6248e2e8.png">
 
-
-
-
- ### Look no Further! 
-  
-
 !Warning!
-This Project will solve all your plant problems 
+This Project will solve all your plant problems! 
 
 # Automatic Waterer
    
@@ -91,6 +85,8 @@ If someone is not so familiar with github, no problem! They can simply email our
 ### How do the reports work?
 Once a plant death is reported, a file will be pushed to our (the project managers') github. This file will be named with the date of the report and contain the plant type and threshold the plant was set to before it died. We can then carefully compile this data and observe any common trends between plant types.
 
+### Can this be customized with different sensors?
+Absolutely! Scroll down to the "Future Uses" section for more details!
 
 ## Design and Testing:
 
@@ -98,8 +94,50 @@ Once a plant death is reported, a file will be pushed to our (the project manage
 The testing portion of this project mainly consisted of low level circuit debuggin (using hardware debugging methods) and running our code while hoping it worked. When it didn't, we would examin the error and try to rectify the issue the error was pointing to. We will discuss particular challenges, often highlighted by these tests in the "challenges" section. 
 
 ### Design
-There are two main 
+There are two main design areas to discuss: Hardware and Software.
 
+### Software
+The main design considerations for the softare consisted of deciding how the screen should look and how the code should run. Certain software elements were decided directly by the hardware, like which ports to set up or when to enable which things. Most other things could be chosen by us, the project creators. 
+
+
+After much discussion, we came up with a way we wanted everything to run. We would have a bash script (pictured underneath) with lines, commands, and  programs which would run sequentially. To be clear this means no program is running in the background. 
+
+<img width="696" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/3ee2c916-8743-4be6-8d7d-ef1feacda9e0">
+
+The whole structure of the automatic watering machine bash file code can be simplified into the following steps:
+
+1. Git pull: pulling the whole repository from GitHub to avoid push problems later.
+
+2. Git02.py: downloading the plant_threshold.txt as plant_thresholds.txt 
+
+3. Readtxt02.py: read the plant_thresholds.txt downloaded from github and show plant choices on the screen for users to pick. The selection will be saved into file ‘new_plant_threshold.txt’
+
+4. Test007_3.py: the main code for watering logic. It reads the previous ‘‘new_plant_threshold.txt’ as default thresholds and allows users to change it dynamically. It will save the plant name and threshold used at the end of the program into ‘bad_plant_threshold.txt’ at the time it’s terminated by the quit button.
+
+5. Report02.py: give user a choice to report bad threshold on their plants. If choose ‘yes’, a new txt file named ‘report_2023-05-10_19-45-06.txt’(for example. The date and time will be the exact time) will be pushed to GitHub Repository.
+
+Next we will go into detail regarding each step, why we made this design choice, and display proof of its functioning.
+
+Step 1: Git pull
+This step is important, because we need the local GitHub repository to be up-to-date, otherwise it will refuse the git push later. To pull the repository, we need to enter that folder first, then run this ‘git pull’ command. This is why you see this step written like so: 
+
+<img width="463" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/ecaacca3-0c85-4661-aeda-93a041ba27b5">
+
+While running the terminal will display something similar to this:
+<img width="380" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/68a410c8-681c-4997-916b-021610637cb0">
+This results from pulling a file which is already up to date on the system. If somehting within the repository had been changed the pull would look slightly different.
+
+This step is an important starting place, because we now have access to any updates if a new plant has been added to the text file. Also Later in our program we allow users the option to push to the repository. If this took place without first initially pulling and just pushing from the raspberry pi, if a file was changed on the github end and it was not reflected on the pi, the push might overwrite the change that was made on the github end as if it never happened. 
+
+We realized this was an important first step since luckily github warns you if you are going to push to a repository before pulling any possible changes. We were able to catch this and implement a fix so no overwrites take place!
+
+
+
+
+
+
+
+We chose to implement this step before anything else so that the plant list could be changed, to add aditionaly plants. As long as github loads the text file change before the bash file is started, the pi will pull this new file and update its list of plants to display for the next portion of the 
 
 
 
