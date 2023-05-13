@@ -183,6 +183,7 @@ Users can change the threshold by pressing the ‘up’ and ‘down’ on the sc
 When the soil moisture level detected is lower than threshold and the water tank is not empty, the machine will start the water pump and show the green progress bar to assure it is watering.
 
 <img width="78" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/9f3be0a9-ed69-4d6e-a19c-9d5a4cc8bf56">
+
 It will then stop  watering once the moisture level has reached the threshold of the plant or above.
 If water tank is empty, it will show a huge text in the top of the screen saying ‘Water Tank Empty’ and stop watering whether the moisture threshold is good or not.
 
