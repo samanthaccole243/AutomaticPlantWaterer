@@ -124,7 +124,9 @@ This step is important, because we need the local GitHub repository to be up-to-
 <img width="463" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/ecaacca3-0c85-4661-aeda-93a041ba27b5">
 
 While running the terminal will display something similar to this:
+
 <img width="380" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/68a410c8-681c-4997-916b-021610637cb0">
+
 This results from pulling a file which is already up to date on the system. If somehting within the repository had been changed the pull would look slightly different.
 
 This step is an important starting place, because we now have access to any updates if a new plant has been added to the text file. Also Later in our program we allow users the option to push to the repository. If this took place without first initially pulling and just pushing from the raspberry pi, if a file was changed on the github end and it was not reflected on the pi, the push might overwrite the change that was made on the github end as if it never happened. 
