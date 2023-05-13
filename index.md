@@ -248,7 +248,7 @@ You can see that for SPI there is a MISO and MISO_1, a MOSI and MOSI_1, etc. Thi
 We had some initial ideas for the next phase of this project. First it would be best if we could get the temperature and humidity sensor working on I2C. We spent a lot of time and got a lot of help trying to figure this out, but nothing seemed to work. So, another solution is probably to buy a temperature and humidity sensor which uses SPI so that we can read them. This data can then be encorporated when a report is sent so we have additional information regarding why a plant might have died. Different plants also have different climates they grow best in which can be reflected by soil moisture, air humidity, and temperature, as well as other factors. We wrote our code so that these additional sources of information can be monitored as well as recorded. A threshold for a plant types air temperature and humidity can be easily include, and made alterable. The system could also then be set up to alert a user when they have left these desireable conditions for their plants.n Unfotunately our system would not be capable of altering the temperature and humoidity easily. Therefore, the air characteristics would have to be mended by the user. As discussed earlier, additional sensors could also be added. In our minds this includes a solar or light sensor as well as any wanted chemical sensors to monitor the ph level and chemical balances of the soil. Again te system could alert the user when any measured data is outside of the preferred threshold for a specific plant, but the user would have to mend this.
 
 
-Further in the future we felt the automatic plant waterer could not only monitor and alert users to issues, but also mend them as it does with the soil moisture. These ideas would be more additional work than the inclusion of more sensors. One surrounds around using the temperature and humidity sensor in a greenhouse like environment. There could be heated lights to increase the temperature if necessary and fans to decrease the temperature or humidity as necessary, as well as a mister to increase humidity. These could be monitored and enabled when necessary by the system, but additional hardware might be necessary in setting all of this up. Another idea would be to use a curtain to shade and unshade a plant based off of the number of hours of sunlight is desired, and the hours of sunlight the solar sensor is reading. A motorr and some kind of mechanism to move the curtain would certainly be need as well as possibly other items. Honestly, this system could easily be customized by any user to do a many number of things.
+Further in the future we felt the automatic plant waterer could not only monitor and alert users to issues, but also mend them as it does with the soil moisture. These ideas would be more additional work than the inclusion of more sensors. One surrounds around using the temperature and humidity sensor in a greenhouse like environment. There could be heated lights to increase the temperature if necessary and fans to decrease the temperature or humidity as necessary, as well as a mister to increase humidity. These could be monitored and enabled when necessary by the system, but additional hardware might be necessary in setting all of this up. Another idea would be to use a curtain to shade and unshade a plant based off of the number of hours of sunlight is desired, and the hours of sunlight the solar sensor is reading. A motor and some kind of mechanism to move the curtain would certainly be need as well as possibly other items. Honestly, this system could easily be customized by any user to do a many number of things.
 
 
 ## References
@@ -262,6 +262,31 @@ Further in the future we felt the automatic plant waterer could not only monitor
 7. Water level sensor: https://lastminuteengineers.com/water-level-sensor-arduino-tutorial/
 
 ## Code Appendix
+<img width="538" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/d5a9fa0e-4265-477b-b8ab-04b3e15e3d8b">
+
+<img width="541" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/866b15b6-9560-4f83-a674-067ad5c4a66c">
+
+<img width="542" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/ab72175e-ac99-4ddd-b5d5-52f033bcd6ba">
+
+<img width="306" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/54b346d5-4cd7-417b-832a-06182be2a6ef">
+
+<img width="307" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/8dbb7d8d-7914-486e-bc1f-fcc3a1741670">
+
+<img width="303" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/6a35491e-aaea-4cbb-b674-72b4a94aaf31">
+
+<img width="299" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/1e3e415e-877a-4b9f-a8ad-46c08d2f5061">
+
+<img width="306" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/fe0817ee-d704-48dc-b640-bfce21d399ee">
+
+<img width="309" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/6d054bb5-5a65-4abc-8771-c6f45508edba">
+
+<img width="307" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/057e6719-45ed-48e4-b55f-e0ac1565b64d">
+
+<img width="298" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/9d6c4d58-25d0-424d-85a9-c1ee80848a63">
+
+<img width="309" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/5daa8cf7-9167-4c30-a407-20a81dcad69b">
+
+<img width="303" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/b54d66cc-b3d6-4c20-a573-238f037c5d90">
 
 
 
