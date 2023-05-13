@@ -16,6 +16,9 @@ This project focuses on building a system that waters your plants for you with l
 
 <img width="297" alt="image" src="https://user-images.githubusercontent.com/89661904/236705943-0a679097-da5c-462c-af3a-b335baf13629.png">
 
+Watch our instructional video here:
+
+
 
 ## High level Overview
 
