@@ -49,7 +49,7 @@ ___picture___
 
 For our demo purposes within the video, you will see us use two clear plastic cups. One represents the water source (cup containing red sensor), while the other represents the soil (cup containing black soil). We utilize these clear cups for testing and demonstration since it is easier to see what is physically taking place. It is also easier to reset the work bench after running the system by simply emptying the black cup.v This is much faster than waiting for the soil to dry back out.
 
-### Screen displays
+### Screen displays and overall functioning:
 
 Now we can examine what happens on the raspberry pi for the automatic plant waterer to function. After pluggin in the raspberry pi, it should turn on. Run the program, as seen in the video by typing ___________________help___. Then you will see a screen with a plant name, a select button and some arrows. The screen will look something like this:
 
@@ -62,4 +62,45 @@ Once you have found the screen with your desired plant, click select. A screen s
 __picture___
 
 This screen displays the air moisture and temperature as measured by the humidity and temperature sensor. Unforutnately for the current model, we were not able to actually get this sensor working appropriately. We will discuss this more in the "Challenges" section. Therefore, the screen simply displays room temperature and 50% percent humidity for now. Next the soil moisture sensor reading can be seen. This number will change slightl as the sensor will contain a bit of noise. The number will also increase drastically after watering, since the soil will be much more moist. The next line confirms that the water level is okay. Then the threshold for the particular plant is displayed. The user has the option to either increase or decrease the threshold according to their will. Just remember that the threshold originally set for that plant is recommended and any changes might starve or drown your plant. We do recognize however that some plants vary and you might want to be able to control the threshold yourself. 
+
+Staying on this screen will make sure that you plant is automatically watered to its preferred threshold, as long as your water source remains filled. You will know your plant is actively being whatered when you see this green progress bar, seen below, scanning across the screen; and you will probably hear the pump. 
+
+__picture__
+
+When the water source is empty the user will have to refill it. If the water pump were to run out of water to pump and try to pump air and water, it may be damaged or break. Luckily, our program watches out for this situation. If the water level sensor senses that the water level is low. The raspberry pi screen will flash a red "water tank empty" warning as seen here:
+
+__picture___
+
+It will also not water your plant even if the plant is dry, since there is no water to pull from in the water source.
+
+Now what happens when eventually you want to move the system to another plant? Simply click the bottom right physical button on the piTFT to quit the program. A new screen (seen below) will appear asking if you want to report? yes or no. 
+___picture___
+If the plant has sadly passed on, we ask that you click that yes button, so we know which settings killed your particular plant type. This helps us guide users in the future to keep them from making the same mistake. IF you siply want to power down the program or switch from one type of living plant to another, then click the "no" response and the program will be ended.
+
+### FAQS: 
+
+### What should you do if you plant was not in the list?
+If the person ordering our product is skilled with github, they may provide us with a github repository. Our pi currently pulls a text file from our git repository every time the code is run, to determine which plants and asssociated thresholds to display. We can set the pi up to pull a specific text file from your repository instead. For this to work seemlessly, there must be no mistakes within how the repository or text file is named and what the pi is told to pull from. The text file also needs to be in the exact format where each line contains a plant name , plant threshold. The text file must look something like this:
+
+___picture___
+
+The threshold can be found by simply googling the web and finding out what soil moisture level (percentage number out of 100) the plant prefers.
+
+If someone is not so familiar with github, no problem! They can simply email our manager with a new plant type to add, and he will handle the rest! The new plant type along with its recommended threshold will 'magically' appear on your pi soon after our manager reads his email!
+
+### How do the reports work?
+Once a plant death is reported, a file will be pushed to our (the project managers') github. This file will be named with the date of the report and contain the plant type and threshold the plant was set to before it died. We can then carefully compile this data and observe any common trends between plant types.
+
+
+## Design and Testing:
+
+### Testing
+The testing portion of this project mainly consisted of low level circuit debuggin (using hardware debugging methods) and running our code while hoping it worked. When it didn't, we would examin the error and try to rectify the issue the error was pointing to. We will discuss particular challenges, often highlighted by these tests in the "challenges" section. 
+
+### Design
+There are two main 
+
+
+
+
 
