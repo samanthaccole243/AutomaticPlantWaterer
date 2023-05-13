@@ -76,7 +76,7 @@ If the plant has sadly passed on, we ask that you click that yes button, so we k
 ### What should you do if you plant was not in the list?
 If the person ordering our product is skilled with github, they may provide us with a github repository. Our pi currently pulls a text file from our git repository every time the code is run, to determine which plants and asssociated thresholds to display. We can set the pi up to pull a specific text file from your repository instead. For this to work seemlessly, there must be no mistakes within how the repository or text file is named and what the pi is told to pull from. The text file also needs to be in the exact format where each line contains a plant name , plant threshold. The text file must look something like this:
 
-___picture___
+<img width="230" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/c2bcaf3d-35ee-4940-a6a2-7d86dbc0692f">
 
 The threshold can be found by simply googling the web and finding out what soil moisture level (percentage number out of 100) the plant prefers.
 
@@ -118,7 +118,9 @@ The whole structure of the automatic watering machine bash file code can be simp
 
 Next we will go into detail regarding each step, why we made this design choice, and display proof of its functioning.
 
+
 Step 1: Git pull
+
 This step is important, because we need the local GitHub repository to be up-to-date, otherwise it will refuse the git push later. To pull the repository, we need to enter that folder first, then run this ‘git pull’ command. This is why you see this step written like so: 
 
 <img width="463" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/ecaacca3-0c85-4661-aeda-93a041ba27b5">
@@ -135,9 +137,31 @@ We realized this was an important first step since luckily github warns you if y
 
 
 Step2: Git02.py: downloading the plant_threshold.txt
+
 Here is a look inside the Git02.py file:
 
+<img width="552" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/5286c10d-38c8-4826-b173-9b75c59afb8f">
 
+Before running anything, there is already an off-line version of plant_thresholds.txt stored in the folder. So even if RPi failed to download/pull, the rest of the program could still run. This is another nifty design choice on our end. This step attempts to download the plant_threshold.txt from GitHub to /home/pi/final0417 (where most of the codes lives). It then reports whether or not it was successful.
 
+Here is an example of a successful report:
+
+<img width="187" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/c42a6435-644f-49ba-87bf-b31c88a95517">
+
+We chose to include this report so users can know their new file has been downloaded or that the pi is still running off of the old file because the new file failed to download. This could be useful for debugging purposes if someone tries to add a new plant and it doesn't show up, and they are perplexed as to why.
+
+Step3: Readtxt02.py: read the plant_thresholds.txt downloaded from github and show plant choices on the screen for users to pick. The selection will be saved into file ‘new_plant_threshold.txt’
+Some pygame window screenshots of this in action can be seen here:
+
+<img width="327" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/13fb6724-a002-46c5-ab1f-1ace3255b797">
+<img width="327" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/dd4f01a7-5098-409d-aa39-b8adecc56ef2">
+
+After clicking ‘select’, the program will save the plant name and threshold in ‘new_plant_threshold.txt’.
+
+Say we clicked, select on Test3, our new_plant_threshold.txt file would look like this:
+<img width="228" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/96377ff6-3d96-4f23-90cb-acfb7bd796c3">
+
+This is used to save onto the current plant type and threshold associated with it. This file is used in the next code.
+For this python file, we specifically decided to display the plants individually (one oge at a time) with their thresholds. This is a very important design decision. If there were more than one plants per page, the page would need to be reformatted every time a plant type is changed or a new plant is added. Putting each plant on its own page means no reformatting is necessary. New plant just means an additional page to scroll through using the arrows.
 
 
