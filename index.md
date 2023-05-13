@@ -134,12 +134,9 @@ This step is an important starting place, because we now have access to any upda
 We realized this was an important first step since luckily github warns you if you are going to push to a repository before pulling any possible changes. We were able to catch this and implement a fix so no overwrites take place!
 
 
+Step2: Git02.py: downloading the plant_threshold.txt
+Here is a look inside the Git02.py file:
 
-
-
-
-
-We chose to implement this step before anything else so that the plant list could be changed, to add aditionaly plants. As long as github loads the text file change before the bash file is started, the pi will pull this new file and update its list of plants to display for the next portion of the 
 
 
 
