@@ -202,6 +202,8 @@ If a user chooses ‘yes’, a new txt file named ‘report_2023-05-10_19-45-06.
 <img width="332" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/dafadd62-3ba3-4ff1-989e-48d2876453e0">
 
 
+We initally decided how we wanted the program to run from a user standpoint. This lead us to design our code as detailed above. 
+
 
 
 
