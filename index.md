@@ -20,7 +20,7 @@ This project focuses on building a system that waters your plants for you with l
 ## High level Overview
 
 ### Setup:
-The base model of this kit comes with a black soil moisture sensor (leftmost), a red water level sensor (mid-left), a temperature and humidity sensor (middle), a water pump with tubing (mid-right) and a raspberry pi along with all the associated circuitry and two power chords (rightmost).
+The base model of this kit comes with a black soil moisture sensor (leftmost), a red water level sensor (mid-left), a temperature and humidity sensor (middle), a raspberry pi along with all the associated circuitry and two power chords (mid-right), and a water pump with tubing (rightmost).
 
 
 __Picture__
