@@ -47,28 +47,30 @@ For our demo purposes within the video, you will see us use two clear plastic cu
 
 Now we can examine what happens on the raspberry pi for the automatic plant waterer to function. After pluggin in the raspberry pi, it should turn on. Run the program, as seen in the video by typing ___________________help___. Then you will see a screen with a plant name, a select button and some arrows. The screen will look something like this:
 
-___picture____
+<img width="327" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/dd4f01a7-5098-409d-aa39-b8adecc56ef2">
 
 Using the arrows, navigate through the different plant options, and choose the plant you are trying to water automatically. If your plant is not there, no problem. You can either watch our video for more details on how to handle this or scroll down to the "What to do if you plamt is not in the initial list" section, then return here when finished.
 
 Once you have found the screen with your desired plant, click select. A screen similar to the image below should appear.
 
-__picture___
+<img width="239" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/54f1ebc6-72a6-4504-9f92-b5622ec6c419">
 
 This screen displays the air moisture and temperature as measured by the humidity and temperature sensor. Unforutnately for the current model, we were not able to actually get this sensor working appropriately. We will discuss this more in the "Challenges" section. Therefore, the screen simply displays room temperature and 50% percent humidity for now. Next the soil moisture sensor reading can be seen. This number will change slightl as the sensor will contain a bit of noise. The number will also increase drastically after watering, since the soil will be much more moist. The next line confirms that the water level is okay. Then the threshold for the particular plant is displayed. The user has the option to either increase or decrease the threshold according to their will. Just remember that the threshold originally set for that plant is recommended and any changes might starve or drown your plant. We do recognize however that some plants vary and you might want to be able to control the threshold yourself. 
 
 Staying on this screen will make sure that you plant is automatically watered to its preferred threshold, as long as your water source remains filled. You will know your plant is actively being whatered when you see this green progress bar, seen below, scanning across the screen; and you will probably hear the pump. 
 
-__picture__
+<img width="236" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/92946689-da88-4da7-8949-dcd55560b047">
 
 When the water source is empty the user will have to refill it. If the water pump were to run out of water to pump and try to pump air and water, it may be damaged or break. Luckily, our program watches out for this situation. If the water level sensor senses that the water level is low. The raspberry pi screen will flash a red "water tank empty" warning as seen here:
 
-__picture___
+<img width="241" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/a24a5a03-abe5-47a7-8aa3-265da47ed59f">
 
 It will also not water your plant even if the plant is dry, since there is no water to pull from in the water source.
 
 Now what happens when eventually you want to move the system to another plant? Simply click the bottom right physical button on the piTFT to quit the program. A new screen (seen below) will appear asking if you want to report? yes or no. 
-___picture___
+
+<img width="209" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/f4259481-2fc6-4009-b5c6-2d59bfdb267e">
+
 If the plant has sadly passed on, we ask that you click that yes button, so we know which settings killed your particular plant type. This helps us guide users in the future to keep them from making the same mistake. IF you siply want to power down the program or switch from one type of living plant to another, then click the "no" response and the program will be ended.
 
 ### FAQS: 
@@ -158,10 +160,35 @@ Some pygame window screenshots of this in action can be seen here:
 
 After clicking ‘select’, the program will save the plant name and threshold in ‘new_plant_threshold.txt’.
 
-Say we clicked, select on Test3, our new_plant_threshold.txt file would look like this:
+Say we clicked, select on Test3, our 'new_plant_threshold.txt' file would look like this:
+
 <img width="228" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/96377ff6-3d96-4f23-90cb-acfb7bd796c3">
 
-This is used to save onto the current plant type and threshold associated with it. This file is used in the next code.
-For this python file, we specifically decided to display the plants individually (one oge at a time) with their thresholds. This is a very important design decision. If there were more than one plants per page, the page would need to be reformatted every time a plant type is changed or a new plant is added. Putting each plant on its own page means no reformatting is necessary. New plant just means an additional page to scroll through using the arrows.
+This is used to save onto the current plant type and threshold associated with it. This file is used in the next code, which is also triggered after the save step.
+
+For this python file, we specifically decided to display the plants individually (one oge at a time) with their thresholds. This is a very important design decision. If there were more than one plants per page, the page would need to be reformatted every time a plant type is changed or a new plant is added. Putting each plant on its own page means no reformatting is necessary. New plant just means an additional page to scroll through using the arrows. 
+
+
+Step 4: Test007_3.py: the main code for watering logic. 
+
+This code reads the previous ‘new_plant_threshold.txt’ with default thresholds and allows users to change the threshold dynamically. 
+The screen once this code is running can be seen here:
+
+<img width="239" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/54f1ebc6-72a6-4504-9f92-b5622ec6c419">
+
+As previously explained, sensor readings are displayed on the screen. 
+
+Users can change the threshold by pressing the ‘up’ and ‘down’ on the screen. It goes up or down for 5% each time.
+
+When the soil moisture level detected is lower than threshold and the water tank is not empty, the machine will start the water pump and show the green progress bar to assure it is watering.
+
+<img width="78" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/9f3be0a9-ed69-4d6e-a19c-9d5a4cc8bf56">
+It will then stop  watering once the moisture level has reached the threshold of the plant or above.
+If water tank is empty, it will show a huge text in the top of the screen saying ‘Water Tank Empty’ and stop watering whether the moisture threshold is good or not.
+
+The plant name and threshold used at the end of the program will be saved into ‘bad_plant_threshold.txt’ at the time it’s terminated by the quit button. The quit button is the right/bottom-most button on the piTFT. We chose to use a physical button, since it would still be functional if a screen issue were to take place.
+If the quit button is pressed, the code will save current plant name and threshold to the ‘bad_plant_threshold.txt’ and exit.
+
+
 
 
