@@ -221,4 +221,29 @@ We had already wired a motor driver for lab 3, so we felt this would be the best
 The colorful lower pinout diagram belongs to the raspberyy pi. The pins whuch are squiggled out are already in use by the PiTFT. Therefore we cannot use them for anything else. The temperature sensor is the black box above that. Again the orange is 3.3V and the grey is ground. The blue wire is the SDA wire and the green wire is SCL. This uses the I2C channels. We chose to use I2C3 and actually tried I2C0 at one point as well, but the temperature sensor is left plugged into GPIO 4 for SDA3 (I2C3) and GPIO 5 for SCL3 (I2C3). 
 
 Lastly the MCP3008 chip had to be plugged into the raspberry pi. This uses SPI instead of I2C. The chip can take up to 8 sensors. We only have two plugged in on channel 0 and 1. So in theory 6 more could be added before another chip is even needed. As you can see in the image, the water level sensor is plugged into channel 0 as well as 3.3V and ground, and the soil moisture sensor is plugged into channel 1 as well as 3.3V and ground. The chip also has a Vref and Vdd which are plugged into 3.3V (orange) and two grounds (AGND and DGND) which are plugged into ground (grey). The remaining yellow wires represent SCLK, Dout (MISO), Din (MOSI), and Chip select. WE decided to use SPI1 so we needed to plug these into the appropriate pins for SPI1. GPIO 16 is the Chip select pin for SPI1. GPIO20 is the MOSI pin for SPI1. GPIO 21 is the SCLK pin for SPI1, and GPIO 19 is the SPI1 MISO pin. All of this pretty much sums up the wiring and hardware.
- 
+
+## Results
+
+We were able to complete this project in an acceptable manner. We definitely started out with big dreams and had to tone them down quite a bit. We had a base project that we felt was necessary to complete, then there were additions we wanted to possibly add if we had more time. For the most part
+we did not get to these additions. These possibilities will be discussed more in the "Future Work" section. We were hindered by a few challenges which we will discuss next in the "challenges" section. We do feel as though we successfully completed this project since it does measure soil moisture and performs wonderfully at automatic watering when necessary. It also successfully reads the water level, and stops watering when the water source runs very low on water. Additionally, it is very possible to add any additional plants and to save date of dead plants. This system can definitely serve to keep a plant thriving and healthy per its watering needs.
+
+### Challenges
+
+We unfortunately faced many challenges throughout this lab. 
+The first challenge was time. we did have to order alot of parts, and we had to wait for these parts to come in. The code also took a long time to figure out and sort so it performed as expected.
+
+Once we got the sensors in, we tried to set them up, and it didnt work. Thus begins the second challenge. We realized the raspberry pi only really defaulty enables one I2C and one SPI, which the PiTFT screen were using. We had to learn how to enable secondary channels (I2C3) and SPI2. We wire up the black soil moisture sensor and the red water level sensor to the MCP3008, then set up the MCP3008 to the SPI1 pins on the raspberry pi. We enabled SPI1 and were able to read the sensors!. We then continued to wire the temperature sensor into the I2C3 pins. We enabled I2C3, ran our code, and received an error. 
+
+Challenge three was unfortunately one we did no overcome. The I2C3 did not work. We attempted to wire up to I2C0 and enable that, still not working. In theory it is enabled like so within the config.txt file: 
+
+<img width="367" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/7a4b3025-22b2-4e92-9c71-a4b3014d2287">
+
+Unfortunately, this uses the board library. If we check the directory of this library, Ther are no terms available to set the code to additional I2C channels as seen below:
+
+<img width="365" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/d3cd78b6-cfb0-4c7d-bdbb-8db7115c5051">
+
+You can see that for SPI there is a MISO and MISO_1, a MOSI and MOSI_1, etc. This means we can enable the SPI1 to those terms. When we attempt to enable I2C3, there is only one SDA and one SCL (the ones being used by the PiTFT, and there are no additional ones to use for the temperature sensor. We tried many things to solve this problem, but we could not solve the issue. We did have a minor issue initially with the sensor address (0x44) not even showing up on the I2C3 channel, but once we changed the sensor it shows up on the channel consistentley. There are just no terms in the board directory to be able to enable the SPI aSCL and SDA pins for this I2C3.
+
+
+
+
