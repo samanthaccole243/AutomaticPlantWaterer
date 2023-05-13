@@ -269,7 +269,7 @@ Further in the future we felt the automatic plant waterer could not only monitor
 
 ## Additional Photos
 
-<img width="350" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/24b3e14c-08d6-4aae-8dee-1fa99195037a">
+<img width="600" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/24b3e14c-08d6-4aae-8dee-1fa99195037a">
 
 
 
