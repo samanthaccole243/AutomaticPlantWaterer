@@ -198,7 +198,7 @@ Step 5 displayes this screen using pygame:
 
 If the user chooses 'no', then the program will simply quit.
 
-If a user chooses ‘yes’, a new txt file named ‘report_2023-05-10_19-45-06.txt’(for example), (The date and time will be the exact time), will be created and pushed to the GitHub repository. It would look like this:
+If the user chooses ‘yes’, a new txt file named ‘report_2023-05-10_19-45-06.txt’(for example), (The date and time will be the exact time), will be created and pushed to the GitHub repository. It would look like this:
 
 <img width="332" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/dafadd62-3ba3-4ff1-989e-48d2876453e0">
 
