@@ -202,7 +202,7 @@ If the user chooses ‘yes’, a new txt file named ‘report_2023-05-10_19-45-0
 
 <img width="332" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/dafadd62-3ba3-4ff1-989e-48d2876453e0">
 
-We initally decided how we wanted the program to run from a user standpoint, aka what we wanted the screens to look like. This lead us to design our code as detailed above. 
+We initally decided how we wanted the program to run from a user standpoint, aka what we wanted the screens to look like. This lead us to design our code as detailed above. A very early drawing of our screen idea can be seen beneath the code section in he "Additional photos" section.
 
 The next design Section concerns hardware.
 
@@ -225,7 +225,7 @@ Lastly the MCP3008 chip had to be plugged into the raspberry pi. This uses SPI i
 ## Results
 
 We were able to complete this project in an acceptable manner. We definitely started out with big dreams and had to tone them down quite a bit. We had a base project that we felt was necessary to complete, then there were additions we wanted to possibly add if we had more time. For the most part
-we did not get to these additions. These possibilities will be discussed more in the "Future Work" section. We were hindered by a few challenges which we will discuss next in the "challenges" section. We do feel as though we successfully completed this project since it does measure soil moisture and performs wonderfully at automatic watering when necessary. It also successfully reads the water level, and stops watering when the water source runs very low on water. Additionally, it is very possible to add any additional plants and to save date of dead plants. This system can definitely serve to keep a plant thriving and healthy per its watering needs.
+we did not get to these additions. These possibilities will be discussed more in the "Future Work" section. We were hindered by a few challenges which we will discuss next in the "challenges" section. We do feel as though we successfully completed this project since it does measure soil moisture and performs wonderfully at automatic watering when necessary. It also successfully reads the water level, and stops watering when the water source runs very low on water. Additionally, it is very possible to add any additional plants and to save date of dead plants. This system can definitely serve to keep a plant thriving and healthy per its watering needs. Proof of all this success can be seen in our demo video as well as throughout the website report here.
 
 ### Challenges
 
@@ -244,6 +244,32 @@ Unfortunately, this uses the board library. If we check the directory of this li
 
 You can see that for SPI there is a MISO and MISO_1, a MOSI and MOSI_1, etc. This means we can enable the SPI1 to those terms. When we attempt to enable I2C3, there is only one SDA and one SCL (the ones being used by the PiTFT, and there are no additional ones to use for the temperature sensor. We tried many things to solve this problem, but we could not solve the issue. We did have a minor issue initially with the sensor address (0x44) not even showing up on the I2C3 channel, but once we changed the sensor it shows up on the channel consistentley. There are just no terms in the board directory to be able to enable the SPI aSCL and SDA pins for this I2C3.
 
+
+## Future Work
+
+We had some initial ideas for the next phase of this project. First it would be best if we could get the temperature and humidity sensor working on I2C. We spent a lot of time and got a lot of help trying to figure this out, but nothing seemed to work. So, another solution is probably to buy a temperature and humidity sensor which uses SPI so that we can read them. This data can then be encorporated when a report is sent so we have additional information regarding why a plant might have died. Different plants also have different climates they grow best in which can be reflected by soil moisture, air humidity, and temperature, as well as other factors. We wrote our code so that these additional sources of information can be monitored as well as recorded. A threshold for a plant types air temperature and humidity can be easily include, and made alterable. The system could also then be set up to alert a user when they have left these desireable conditions for their plants.n Unfotunately our system would not be capable of altering the temperature and humoidity easily. Therefore, the air characteristics would have to be mended by the user. As discussed earlier, additional sensors could also be added. In our minds this includes a solar or light sensor as well as any wanted chemical sensors to monitor the ph level and chemical balances of the soil. Again te system could alert the user when any measured data is outside of the preferred threshold for a specific plant, but the user would have to mend this.
+
+
+Further in the future we felt the automatic plant waterer could not only monitor and alert users to issues, but also mend them as it does with the soil moisture. These ideas would be more additional work than the inclusion of more sensors. One surrounds around using the temperature and humidity sensor in a greenhouse like environment. There could be heated lights to increase the temperature if necessary and fans to decrease the temperature or humidity as necessary, as well as a mister to increase humidity. These could be monitored and enabled when necessary by the system, but additional hardware might be necessary in setting all of this up. Another idea would be to use a curtain to shade and unshade a plant based off of the number of hours of sunlight is desired, and the hours of sunlight the solar sensor is reading. A motorr and some kind of mechanism to move the curtain would certainly be need as well as possibly other items. Honestly, this system could easily be customized by any user to do a many number of things.
+
+
+## References
+
+1. Happy plant photo: https://www.vecteezy.com/vector-art/3453255-happy-baby-plant-pot-cartoon-character
+2. droopy sad plant photo: https://www.istockphoto.com/illustrations/dead-plants
+3. brown sad plant photo: https://www.vectorstock.com/royalty-free-vector/dead-withered-plant-in-pot-ailing-dying-droopy-vector-46934145
+4. MCP3008 wiring: https://learn.adafruit.com/raspberry-pi-analog-to-digital-converters/mcp3008
+5. Temperature sensor wiring: https://learn.adafruit.com/adafruit-am2320-temperature-humidity-i2c-sensor/overview
+6. Soil moisture: https://how2electronics.com/interface-capacitive-soil-moisture-sensor-arduino/
+7. Water level sensor: https://lastminuteengineers.com/water-level-sensor-arduino-tutorial/
+
+## Code Appendix
+
+
+
+## Additional Photos
+
+<img width="477" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/24b3e14c-08d6-4aae-8dee-1fa99195037a">
 
 
 
