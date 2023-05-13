@@ -104,7 +104,7 @@ The main design considerations for the softare consisted of deciding how the scr
 
 After much discussion, we came up with a way we wanted everything to run. We would have a bash script (pictured underneath) with lines, commands, and  programs which would run sequentially. To be clear this means no program is running in the background. 
 
-<img width="696" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/3ee2c916-8743-4be6-8d7d-ef1feacda9e0">
+<img width="450" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/3ee2c916-8743-4be6-8d7d-ef1feacda9e0">
 
 The whole structure of the automatic watering machine bash file code can be simplified into the following steps:
 
@@ -269,7 +269,7 @@ Further in the future we felt the automatic plant waterer could not only monitor
 
 ## Additional Photos
 
-<img width="477" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/24b3e14c-08d6-4aae-8dee-1fa99195037a">
+<img width="350" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/24b3e14c-08d6-4aae-8dee-1fa99195037a">
 
 
 
