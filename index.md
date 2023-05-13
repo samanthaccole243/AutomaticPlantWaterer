@@ -268,25 +268,25 @@ Further in the future we felt the automatic plant waterer could not only monitor
 
 <img width="542" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/ab72175e-ac99-4ddd-b5d5-52f033bcd6ba">
 
-<img width="306" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/54b346d5-4cd7-417b-832a-06182be2a6ef">
+<img width="540" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/54b346d5-4cd7-417b-832a-06182be2a6ef">
 
-<img width="307" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/8dbb7d8d-7914-486e-bc1f-fcc3a1741670">
+<img width="540" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/8dbb7d8d-7914-486e-bc1f-fcc3a1741670">
 
-<img width="303" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/6a35491e-aaea-4cbb-b674-72b4a94aaf31">
+<img width="540" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/6a35491e-aaea-4cbb-b674-72b4a94aaf31">
 
-<img width="299" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/1e3e415e-877a-4b9f-a8ad-46c08d2f5061">
+<img width="540" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/1e3e415e-877a-4b9f-a8ad-46c08d2f5061">
 
-<img width="306" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/fe0817ee-d704-48dc-b640-bfce21d399ee">
+<img width="540" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/fe0817ee-d704-48dc-b640-bfce21d399ee">
 
-<img width="309" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/6d054bb5-5a65-4abc-8771-c6f45508edba">
+<img width="540" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/6d054bb5-5a65-4abc-8771-c6f45508edba">
 
-<img width="307" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/057e6719-45ed-48e4-b55f-e0ac1565b64d">
+<img width="540" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/057e6719-45ed-48e4-b55f-e0ac1565b64d">
 
-<img width="298" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/9d6c4d58-25d0-424d-85a9-c1ee80848a63">
+<img width="540" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/9d6c4d58-25d0-424d-85a9-c1ee80848a63">
 
-<img width="309" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/5daa8cf7-9167-4c30-a407-20a81dcad69b">
+<img width="540" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/5daa8cf7-9167-4c30-a407-20a81dcad69b">
 
-<img width="303" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/b54d66cc-b3d6-4c20-a573-238f037c5d90">
+<img width="540" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/b54d66cc-b3d6-4c20-a573-238f037c5d90">
 
 
 
