@@ -214,7 +214,7 @@ The next design Section concerns hardware.
 
 Here is an image of the circuit schematic:
 
-<img width="415" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/e6e67d4c-6d6f-49e1-97f3-c2dac0336e1b">
+<img width="800" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/e6e67d4c-6d6f-49e1-97f3-c2dac0336e1b">
 
 
 We had already wired a motor driver for lab 3, so we felt this would be the best way to handle the water pump since this is a type of motor. We also decided to keep the light in the pwm line so that we could see whether the pwm signal was working as expected for any debugging purposes. The circuit is for the most part color coded. Grey represents ground and orange represents 3.3 V. Purple is the pwm line I just discussed as well as the output to the motor water pump. We chose to decide the pwm in for the motor driver last since certain GPIO pins need to be used for specific purposes. After setting up the sen ors and other which need specific pins, we chose GPIO pin 13 since it was unused and capable of pwm. This motor driver also needs an additional 5V power source to power the water pump. For lab 3, we had used the power supply. For this project, we wanted the system to be applicable in a modern day home. Most homes do not have power supplies. We purchased a female usb-c and soldered this to cables to attach to the motor driver. Now the motor driver can be powered using the same matching power chord as the one which powers the raspberry pi simply by pluggin one end into the wall and the usb-c end to our female usb-c.
