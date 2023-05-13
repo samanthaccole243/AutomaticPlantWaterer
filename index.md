@@ -19,7 +19,8 @@ This project focuses on building a system that waters your plants for you with l
 Watch our instructional video here:
 
 
-</p> <iframe width="560" height="315" src="https://www.youtube.com/embed/ckWJXYkQexQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ckWJXYkQexQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 
 ## High level Overview
