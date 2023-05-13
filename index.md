@@ -166,7 +166,7 @@ Say we clicked, select on Test3, our 'new_plant_threshold.txt' file would look l
 
 This is used to save onto the current plant type and threshold associated with it. This file is used in the next code, which is also triggered after the save step.
 
-For this python file, we specifically decided to display the plants individually (one oge at a time) with their thresholds. This is a very important design decision. If there were more than one plants per page, the page would need to be reformatted every time a plant type is changed or a new plant is added. Putting each plant on its own page means no reformatting is necessary. New plant just means an additional page to scroll through using the arrows. 
+For this python file, we specifically decided to display the plants individually (one oge at a time) with their thresholds. This is a very important design decision. If there were more than one plants per page, the page would need to be reformatted every time a plant type is changed or a new plant is added. Putting each plant on its own page means no reformatting is necessary. New plant just means an additional page to scroll through using the arrows. The code for this python file can be seen in our appendix.
 
 
 Step 4: Test007_3.py: the main code for watering logic. 
@@ -187,7 +187,21 @@ It will then stop  watering once the moisture level has reached the threshold of
 If water tank is empty, it will show a huge text in the top of the screen saying ‘Water Tank Empty’ and stop watering whether the moisture threshold is good or not.
 
 The plant name and threshold used at the end of the program will be saved into ‘bad_plant_threshold.txt’ at the time it’s terminated by the quit button. The quit button is the right/bottom-most button on the piTFT. We chose to use a physical button, since it would still be functional if a screen issue were to take place.
-If the quit button is pressed, the code will save current plant name and threshold to the ‘bad_plant_threshold.txt’ and exit.
+If the quit button is pressed, the code will save current plant name and threshold to the ‘bad_plant_threshold.txt’ and exit. The code for this python file can be seen in our appendix.
+
+Step 5: Report02.py: give user a choice to report bad threshold on their plants.
+
+Step 5 displayes this screen using pygame:
+
+<img width="209" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/cf0635cf-625e-4a1f-8f39-28e4390bcc78">
+
+If the user chooses 'no', then the program will simply quit.
+
+If a user chooses ‘yes’, a new txt file named ‘report_2023-05-10_19-45-06.txt’(for example), (The date and time will be the exact time), will be created and pushed to the GitHub repository. It would look like this:
+
+<img width="332" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/dafadd62-3ba3-4ff1-989e-48d2876453e0">
+
+
 
 
 
