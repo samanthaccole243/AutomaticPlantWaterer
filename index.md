@@ -35,7 +35,7 @@ The black soil moisture sensor should be placed in the soil of a plant as seen h
 
 The water pump with tubing attached and the red water level sensor should be placed in your water source as seen here:
 
-<img width="280" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/1350c6d0-ab68-42dd-b23e-7141f43817b3">
+<img width="350" alt="image" src="https://github.com/samanthaccole243/AutomaticPlantWaterer/assets/89661904/1350c6d0-ab68-42dd-b23e-7141f43817b3">
 
 
 The other end of the tubing should then lead to the soil of your plant. The raspberry pi needs to be connected to a power chord. A matching power chord also needs to be plugged into the residual female usb-c. This is used to power the water pump. Originally in the lab, a 5v power supply was used, but using a power chord with no additional hardware plugged into the wall, will also provide a 5V power supply, so we chose to incorporate this so anyone could set this up in their own home.
